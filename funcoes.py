@@ -35,3 +35,14 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
         sublista2.append(dados_no_estoque[i])
     novo.append(sublista2)
     return novo
+
+def calcula_pontos_regra_simples(lista):
+    dic = {}
+    i = 1
+    while i < 7:
+        dic[i] = 0
+        i += 1
+    for j in range(len(lista)):
+        dado = lista[j]
+        dic[dado] += dado
+    return dic
