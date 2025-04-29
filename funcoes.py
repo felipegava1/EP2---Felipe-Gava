@@ -21,3 +21,17 @@ def guardar_dado(dados_rolados, dados_no_estoque, dados_para_guardar):
         sublista2.append(dados_no_estoque[i])
     novo.append(sublista2)
     return novo
+
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    novo = []
+    sublista1 = []
+    sublista2 = []
+    dados_rolados.append(dados_no_estoque[dado_para_remover])
+    del dados_no_estoque[dado_para_remover]
+    for i in range(len(dados_rolados)):
+        sublista1.append(dados_rolados[i])
+    novo.append(sublista1)
+    for i in range(len(dados_no_estoque)):
+        sublista2.append(dados_no_estoque[i])
+    novo.append(sublista2)
+    return novo
