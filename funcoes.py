@@ -8,4 +8,3 @@ def rolar_dados(x):
         i += 1
     return lista
 
-print(rolar_dados(5))
