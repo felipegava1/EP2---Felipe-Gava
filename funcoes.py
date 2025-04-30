@@ -65,3 +65,14 @@ def calcula_pontos_sequencia_baixa(lista):
         return 15
     else:
         return 0
+
+def calcula_pontos_sequencia_alta(lista):
+    sequencia_alta = False
+    if 1 in lista and 2 in lista and 3 in lista and 4 in lista and 5 in lista:
+        sequencia_alta = True
+    if 6 in lista and 2 in lista and 3 in lista and 4 in lista and 5 in lista:
+        sequencia_alta = True
+    if sequencia_alta == True:
+        return 30
+    else:
+        return 0
