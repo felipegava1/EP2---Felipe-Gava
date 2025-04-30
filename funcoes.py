@@ -130,3 +130,19 @@ def calcula_pontos_quina(lista):
         return 50
     else: 
         return 0
+
+def calcula_pontos_regra_avancada(lista):
+    psoma = calcula_pontos_soma(lista)
+    psbaixo = calcula_pontos_sequencia_baixa(lista)
+    psalta = calcula_pontos_sequencia_alta(lista)
+    pfullhouse = calcula_pontos_full_house(lista)
+    pquadra = calcula_pontos_quadra(lista)
+    pquina = calcula_pontos_quina(lista)
+    dic = {'cinco_iguais': 0, 'full_house': 0, 'quadra': 0, 'sem_combinacao': 0, 'sequencia_alta': 0, 'sequencia_baixa': 0}
+    dic['cinco_iguais'] += pquina
+    dic['full_house'] += pfullhouse
+    dic['quadra'] += pquadra
+    dic['sem_combinacao'] += psoma
+    dic['sequencia_alta'] += psalta
+    dic['sequencia_baixa'] += psbaixo
+    return dic
