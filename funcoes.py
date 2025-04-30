@@ -46,3 +46,9 @@ def calcula_pontos_regra_simples(lista):
         dado = lista[j]
         dic[dado] += dado
     return dic
+
+def calcula_pontos_soma(lista):
+    pontos = 0
+    for i in range(len(lista)):
+        pontos += lista[i]
+    return pontos
