@@ -95,3 +95,22 @@ def calcula_pontos_full_house(lista):
         return pontos
     else: 
         return 0
+
+def calcula_pontos_quadra(lista):
+    dic = {}
+    for i in range(len(lista)):
+        if lista[i] in dic:
+            dic[lista[i]] += 1
+        else:
+            dic[lista[i]] = 1 
+    quadra = False
+    for x in dic.values():
+        if x >= 4:
+            quadra = True
+    if quadra:
+        pontos = 0
+        for i in range(len(lista)):
+            pontos += lista[i]
+        return pontos 
+    else: 
+        return 0
