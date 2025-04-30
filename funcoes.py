@@ -114,3 +114,19 @@ def calcula_pontos_quadra(lista):
         return pontos 
     else: 
         return 0
+
+def calcula_pontos_quina(lista):
+    dic = {}
+    for i in range(len(lista)):
+        if lista[i] in dic:
+            dic[lista[i]] += 1
+        else:
+            dic[lista[i]] = 1 
+    quina = False
+    for x in dic.values():
+        if x >= 5:
+            quina = True
+    if quina:
+        return 50
+    else: 
+        return 0
