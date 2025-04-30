@@ -76,3 +76,22 @@ def calcula_pontos_sequencia_alta(lista):
         return 30
     else:
         return 0
+    
+def calcula_pontos_full_house(lista):
+    dic = {}
+    for i in range(len(lista)):
+        if lista[i] in dic:
+            dic[lista[i]] += 1
+        else:
+            dic[lista[i]] = 1   
+    if 2 in dic.values() and 3 in dic.values():
+        fullhouse = True
+    else:
+        fullhouse = False
+    if fullhouse:
+        pontos = 0
+        for i in range(len(lista)):
+            pontos += lista[i]
+        return pontos
+    else: 
+        return 0
