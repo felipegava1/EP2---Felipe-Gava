@@ -146,3 +146,13 @@ def calcula_pontos_regra_avancada(lista):
     dic['sequencia_alta'] += psalta
     dic['sequencia_baixa'] += psbaixo
     return dic
+
+def faz_jogada(dados, categoria, dic):
+    if categoria == '1' or categoria == '2' or categoria == '3' or categoria == '4' or categoria == '5' or categoria == '6':
+        n = int(categoria)
+        p= calcula_pontos_regra_simples(dados)
+        dic['regra_simples'][n] = p[n]
+    else:
+        p = calcula_pontos_regra_avancada(dados)
+        dic['regra_avancada'][categoria] = p[categoria]
+    return dic
